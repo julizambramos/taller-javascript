@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>Formulario</title>
+
+</head>
+<body>
+
+	<div class="container">
+		<div id="navigation" class="form__top navigation hidden">
+			<div id="progress_bar"></div>
+			<div class="text-header">
+				<span id="fullname"></span>
+				<span class="answered"><span id="answered"></span><span title="Debe contestar todas las preguntas" id="btn__check" class="btn__check disabled" disabled="disabled" onclick="checkQuestions()">🔍</span></span>
+
+			</div>
+			<span id="questions_numbers"></span>
+		</div>
+		<div id="get_data" class="cont_trans">
+			<div class="form__top">
+				<h2>Iniciar<span>Test</span></h2>
+			</div>
+			<div class="form__reg">
+			  	<input class="input" type="text" autocomplete="none" name ="nombre" id ="nombre" placeholder="&#128100;  Nombre" required autofocus>
+	           	<input class="input" type="text" autocomplete="none" name ="apellido" id ="apellido" placeholder="&#128100;  Apellido" required>
+	           	<input class="input" type="number" autocomplete="none" name ="puntaje" id ="puntaje" placeholder="📈  Puntaje para aprobar" required min="0">
+	           	<div class="btn__form">
+	            	<input class="btn__submit" onclick="iniciar()" type="submit" value="INICIAR">
+	            </div>
+			</div>
+		</div>
+		<div id="question_data" class="cont_trans hidden">
+			<div class="form__top">
+				<h2 id="number_text">Pregunta <span id="current_number"></span>/ <span id="all_number"></span></h2>
+				<h3 id="question_text"></h2>
+			</div>
+			<div class="form__reg">
+				<div class="form__quest" id="form__quest">
+					
+				</div>
+	           	<div class="btn__form">
+	            	<input class="btn__submit disabled" disabled="disabled" id="btn_prev" onclick="anterior()" type="submit" value="ANTERIOR">
+	            	<input class="btn__submit" id="btn_next" onclick="siguiente()" type="submit" value="SIGUIENTE">
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div id="pass-all" class="container hidden trans">
+		<div class="form__top">
+			<h2>Estado de la prueba</h2><br>
+			<p>Puntaje para pasar: <span id="puntaje-pass"></span></p>
+			<p>Puntaje actual: <span id="puntaje-current"></span></p>
+			<p id="puntaje-state"></p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

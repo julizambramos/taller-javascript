@@ -1,0 +1,241 @@
+html {
+	font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: #9AD1ED;
+}
+
+.container {
+	max-width: 450px;
+	height: auto;
+	background-color: #EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+
+.form__top {
+	width: 100%;
+	text-align: center;
+	padding: 1rem 0 1rem;
+	border-top: solid .4rem #F39B53;
+	margin-bottom: 1rem;
+}
+.question.selected{
+	color: #F39B53!important;
+}
+.question.selected .select_radio{
+	border: solid 2px #F39B53!important;
+}
+.question.fail{
+	color: #FF5722!important;
+}
+.question.fail .select_radio{
+	border: solid 2px #FF5722!important;
+}
+.question.good{
+	color: #4caf50!important;
+}
+.question.good .select_radio{
+	border: solid 2px #4caf50!important;
+}
+.question.selected .select_radio:after{
+	width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    content: '';
+    position: absolute;
+    background: #F39B53!important;
+}
+.question{
+	padding: 4px;
+	color: #616161;
+	line-height: 18px;
+	cursor: pointer;
+	transition: all .3s;
+}
+.question:hover{
+	color: black;
+}
+.question:hover .select_radio{
+	border: solid 2px black;
+}
+.question span{
+	vertical-align: middle;
+}
+.select_radio{
+	width: 16px;
+	height: 16px;
+	border: solid 2px #616161;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50px;
+	transition: all .3s;
+	position: relative;
+}
+.form__top.navigation #fullname{
+	margin-left: .5rem;
+}
+.form__top.navigation .answered{
+	float: right;
+	margin-right: .5rem;
+}
+.round-number{
+	width: 19px;
+	height: 19px;
+	border: solid 3px #757575;
+	border-radius: 50%;
+	margin: 10px 4px 10px 4px;
+	display: inline-block;
+	padding: 2px;
+	position: relative;
+}
+.round-number.active{
+	color: #F39B53;
+	border: solid 3px #F39B53;
+}
+.round-number.current:after{
+  	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #F39B53;
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 2px;
+}
+.round-number.fail{
+	color: #FF5722;
+	border: solid 3px #FF5722;
+}
+.round-number.good{
+	color: #4caf50;
+	border: solid 3px #4caf50;
+}
+.form__top.navigation{
+	padding: 0;
+	margin-bottom: 0px;
+	color: #757575;
+	border-top: solid 0px transparent;
+}
+.text-header{
+	text-align: left;
+}
+.form__top.navigation.hidden{
+	margin: 0;
+    padding: 0;
+    border: solid 0px transparent;
+}
+
+.form__top h2 {
+	font-weight: bold;
+	color: #757575;
+	font-size: 18px;
+}
+.form__top h3 {
+	font-weight: bold;
+	color: #757575;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+h2 span {
+	color: #F39B53;
+}
+
+.form__reg {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn__form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn__submit, .btn__reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #757575 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+}
+
+@keyframes vibrate {
+  0% {left: 0px;}
+  25% {left: -5px;}
+  50% {left: 0px;}
+  75% {left: 5px;}
+  100% {left: 0px;}
+}
+.vibrate{
+	position: relative;
+	animation: vibrate .1s infinite;
+}
+.btn__submit, .btn__reset {
+	cursor: pointer;
+	width: 40%;
+	border-bottom: none;
+	background-color: #31B1E5;
+	color: white;
+}
+.btn__submit.disabled,.btn__submit.disabled:hover, .btn__reset.disabled, .btn__reset.disabled:hover {
+	background-color: #aaaaaa;
+}
+.cont_trans{
+	transition: all .5s!important;
+	height: 280px;
+}
+.trans{
+	transition: all .5s!important;
+	height: 100px;
+}
+#progress_bar{
+	height: .4rem;
+	background: #31B1E5;
+	margin-bottom: 5px;
+	transition: .8s cubic-bezier(0.42, 0, 0, 0.6);
+}
+.hidden{
+	height: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+.btn__reset {
+	background-color: #EDA135;
+}
+.btn__check {
+	font-size: 12px;
+    margin: 0px 0px 0 10px;
+    cursor: pointer;
+    border: solid 1px #EDA135;
+    padding: 2px;
+    border-radius: 10px;
+}
+.btn__check.active{
+	background: #EDA135;
+}
+.btn__check.disabled{
+    border: solid 1px grey;
+	filter: blur(1px);
+	cursor: default;
+}
+
+.btn__submit:hover {
+	background-color: #4C9ED9;
+}
+
+.btn__reset:hover{
+	background-color: #FA9535;
+}
